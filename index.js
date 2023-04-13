@@ -7,11 +7,11 @@ app.get('/', (req, res) => {
 
 
 app.get('/clientes', (req, res) =>{
-    res.sendFile('/clienets.html')
+    res.send('cliente1, cliente2')
 })
 
 app.get('/productos', (req, res) => {
-    res.sendFile('/productos.html')
+    res.sendFile('./productos.html')
 })
 
 
