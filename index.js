@@ -1,8 +1,5 @@
 const express = require('express');
-const path = require('path');
 const app = express();
-const PORT = 3000;
-
 
 app.get('/', (req, res) => {
     res.send('Max Martinez Saavedra')
@@ -10,15 +7,15 @@ app.get('/', (req, res) => {
 
 
 app.get('/clientes', (req, res) =>{
-    res.send('cliente1','cliente2','cliente3')
+    res.sendFile('/clientes.html')
 })
 
 app.get('/productos', (req, res) => {
-    res.sendFile('producto1','producto2','producto3')
+    res.sendFile('/productos.html')
 })
 
 
-app.listen(PORT, function (err) {
-    if (err) console.log(err);
-    console.log("Server listening on PORT", PORT);
-});
+const port = process.env.PORT || 5000
+app.listen(port,() => {
+    console.log('SASAS')
+})
