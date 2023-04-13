@@ -7,7 +7,7 @@ app.get('/', (req, res) => {
 
 
 app.get('/clientes', (req, res) =>{
-    res.sendFile('/clientes.html')
+    res.sendFile('/clienets.html')
 })
 
 app.get('/productos', (req, res) => {
@@ -17,5 +17,5 @@ app.get('/productos', (req, res) => {
 
 const port = process.env.PORT || 5000
 app.listen(port,() => {
-    console.log('SASAS')
+    console.log('SASasaS')
 })
