@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path');
 const app = express();
 
 app.get('/', (req, res) => {
@@ -7,11 +8,11 @@ app.get('/', (req, res) => {
 
 
 app.get('/clientes', (req, res) =>{
-    res.send('cliente1, cliente2')
+    res.sendFile(path.join(__dirname, 'clientes.html'));
 })
 
 app.get('/productos', (req, res) => {
-    res.sendFile('./productos.html')
+    res.sendFile(path.join(__dirname, 'productos.html'));
 })
 
 
